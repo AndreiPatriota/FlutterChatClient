@@ -74,6 +74,7 @@ class Connector{
             _io.subscribe('kicked', _kicked);
             _io.subscribe('invited', _invited);
             _io.subscribe('posted', _posted);
+            callback();
           }
           _io.init();
           _io.connect();
@@ -82,7 +83,7 @@ class Connector{
 
   void validate({@required final String userName,
     @required final String password,
-    @required final Function callback}){
+    @required final Future<void> Function(String inString) callback}){
 
     _showPleaseWait();
     var message = '{\"userName\" : \"$userName\",'
