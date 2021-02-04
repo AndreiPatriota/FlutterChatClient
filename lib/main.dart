@@ -20,13 +20,10 @@ void main(){
     var credentials;
     var credParts;
 
+    while(mdl.rootBuildContext == null){}
+
     if(exists){
       credentials = await credentialFiles.readAsString();
-    }
-
-    runApp(FlutterChat());
-
-    if(exists){
       credParts = credentials.split('============');
       LoginDialog.validateWithStoredCredentials(credParts[0], credParts[1]);
     }
@@ -38,12 +35,22 @@ void main(){
       );
     }
   }
+
   WidgetsFlutterBinding.ensureInitialized();
   startMeUp();
+  runApp(FlutterChat());
 }
 
-
 class FlutterChat extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) =>
+      MaterialApp(
+        home: Scaffold(body: FlutterChatMain()),
+      );
+}
+
+class FlutterChatMain extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
