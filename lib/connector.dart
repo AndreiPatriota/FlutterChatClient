@@ -98,7 +98,7 @@ class Connector{
 
   }
 
-  void listRooms({@required final Function callback}){
+  void listRooms({@required final void Function(Map<String, dynamic>) callback}){
     _showPleaseWait();
     var message = '{}';
     _io.sendMessage('listRooms', message,
@@ -176,7 +176,7 @@ class Connector{
 
   }
 
-  void listUsers({@required final Function callback}){
+  void listUsers({@required final void Function(Map<String, dynamic>) callback}){
 
     _showPleaseWait();
     var message = '{}';

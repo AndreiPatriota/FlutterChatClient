@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_client/views/home.dart';
-import 'package:flutter_chat_client/views/logindialog.dart';
+import 'package:flutter_chat_client/views/Home.dart';
+import 'package:flutter_chat_client/views/LoginDialog.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -38,19 +38,13 @@ void main(){
 
   WidgetsFlutterBinding.ensureInitialized();
   startMeUp();
-  runApp(FlutterChat());
+  runApp(MaterialApp(
+    home: FlutterChat(),
+  )
+  );
 }
 
 class FlutterChat extends StatelessWidget{
-
-  @override
-  Widget build(BuildContext context) =>
-      MaterialApp(
-        home: Scaffold(body: FlutterChatMain()),
-      );
-}
-
-class FlutterChatMain extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
