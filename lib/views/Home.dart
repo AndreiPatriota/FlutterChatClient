@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'package:flutter_chat_client/model.dart' show mdl, FlutterChatModel;
+import 'package:flutter_chat_client/FlutterChatModel.dart' show mdl, FlutterChatModel;
 import 'AppDrawer.dart';
 
 class Home extends StatelessWidget{

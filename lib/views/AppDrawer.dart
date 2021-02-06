@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'package:flutter_chat_client/model.dart' show mdl, FlutterChatModel;
-import 'package:flutter_chat_client/connector.dart' show conn;
+import 'package:flutter_chat_client/FlutterChatModel.dart' show mdl, FlutterChatModel;
+import 'package:flutter_chat_client/Connector.dart' show conn;
 
 class AppDrawer extends StatelessWidget{
 
@@ -49,7 +49,7 @@ class AppDrawer extends StatelessWidget{
                           title: Text('Lobby'),
                           onTap: (){
                             Navigator.of(inContext)
-                                .pushNamedAndRemoveUntil('Lobby', ModalRoute.withName('/'));
+                                .pushNamedAndRemoveUntil('/Lobby', ModalRoute.withName('/'));
                             conn.listRooms(
                                 callback: (inRoomList){
                                   mdl.setRoomsList = inRoomList;
@@ -65,7 +65,7 @@ class AppDrawer extends StatelessWidget{
                           title: Text('Current Room'),
                           onTap: (){
                             Navigator.of(inContext)
-                                .pushNamedAndRemoveUntil('Room', ModalRoute.withName('/'));
+                                .pushNamedAndRemoveUntil('/Room', ModalRoute.withName('/'));
                           },
                         ),
                       ),
@@ -76,7 +76,7 @@ class AppDrawer extends StatelessWidget{
                           title: Text('User List'),
                           onTap: (){
                             Navigator.of(inContext)
-                                .pushNamedAndRemoveUntil('UserList', ModalRoute.withName('/'));
+                                .pushNamedAndRemoveUntil('/UserList', ModalRoute.withName('/'));
                             conn.listRooms(
                                 callback: (inUserList){
                                   mdl.setUsersList = inUserList;

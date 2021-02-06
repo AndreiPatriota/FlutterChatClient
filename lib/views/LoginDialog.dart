@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_client/connector.dart';
+import 'package:flutter_chat_client/Connector.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'package:flutter_chat_client/model.dart' show mdl, FlutterChatModel;
+import 'package:flutter_chat_client/FlutterChatModel.dart' show mdl, FlutterChatModel;
 import 'dart:io' show File, exit;
 import 'package:path/path.dart' show join;
 

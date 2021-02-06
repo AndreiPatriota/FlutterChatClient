@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_socket_io/flutter_socket_io.dart';
 import 'package:flutter_socket_io/socket_io_manager.dart';
-import 'model.dart' show mdl, FlutterChatModel;
+import 'FlutterChatModel.dart' show mdl, FlutterChatModel;
 
 class Connector{
   String serverURL = 'http://raspzero.local';
@@ -140,7 +140,7 @@ class Connector{
 
   void join({@required final String userName,
     @required final String roomName,
-    @required final Function callback}){
+    @required final void Function(String, Map) callback}){
 
     _showPleaseWait();
     var message = '{\"userName\" : \"$userName\",'
