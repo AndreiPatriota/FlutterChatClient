@@ -115,7 +115,7 @@ class Connector{
     final int numMaxPeople = 20,
     final bool isPrivate = false,
     @required final String creator,
-    @required final Function callback}){
+    @required final void Function(String, Map) callback}){
 
     _showPleaseWait();
     var message = '{\"Name\" : \"$roomName\",'

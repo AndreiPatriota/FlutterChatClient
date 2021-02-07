@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_client/views/Home.dart';
 import 'package:flutter_chat_client/views/LoginDialog.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart' show getApplicationDocumentsDirectory;
+import 'package:path/path.dart' show join;
 import 'package:scoped_model/scoped_model.dart';
 import 'FlutterChatModel.dart' show mdl, FlutterChatModel;
 import 'Connector.dart' show conn;
 import 'dart:io';
 import 'views/Lobby.dart';
+import 'views/CreateRoom.dart';
 
 startMeUp() async{
 
@@ -59,7 +60,7 @@ class FlutterChat extends StatelessWidget{
                   '/Lobby' : (someContext)=>Lobby(),
                   '/Room' : (someContext)=>Text('Men At Work'),
                   '/UserList' : (someContext)=>Text('Men At Work'),
-                  '/CreateRoom' : (someContext)=>Text('Men At Work')
+                  '/CreateRoom' : (someContext)=>CreateRoom()
                 },
                 home: Home(),
               )
