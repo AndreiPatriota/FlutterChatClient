@@ -51,6 +51,7 @@ flutter:
     - assets/images/drawback01.jpg
     - assets/images/private.png
     - assets/images/public.png
+    - assets/images/user.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

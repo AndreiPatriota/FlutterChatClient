@@ -16,13 +16,9 @@ class CreateRoomSate extends State{
 
   String _title;
   String _description;
-  bool _private;
+  bool _private = false;
   double _maxPeople = 25;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
-  CreateRoomSate(){
-    _private = false;
-  }
 
   @override
   Widget build(BuildContext context) =>

@@ -212,7 +212,7 @@ class Connector{
   void post({@required final String userName,
     @required final String roomName,
     @required final String messageToPost,
-    @required final Function callback}){
+    @required final Function(String) callback}){
 
     _showPleaseWait();
     var message = '{\"userName\" : \"$userName\",'
